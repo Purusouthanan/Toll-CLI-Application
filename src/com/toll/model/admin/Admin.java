@@ -3,6 +3,9 @@ package com.toll.model.admin;
 /**
  * Represents an authorized highway administrative authority (e.g. NHAI Officer).
  */
+
+
+
 public class Admin {
     private final String adminId;
     private final String name;
