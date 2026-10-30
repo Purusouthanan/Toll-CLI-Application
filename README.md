@@ -4,7 +4,9 @@
 [![Java Version](https://img.shields.io/badge/Java-21%20%7C%2023-orange.svg)](https://www.oracle.com/java/)
 [![Architecture](https://img.shields.io/badge/Design-Domain--Driven%20(DDD)-blue.svg)]()
 [![OOP Tenets](https://img.shields.io/badge/OOP-Inheritance%20%7C%20Polymorphism%20%7C%20Encapsulation%20%7C%20Abstraction-green.svg)]()
+[![Total Tests](https://img.shields.io/badge/Total%20Tests-46%2F46%20Passing-brightgreen.svg)]()
 [![Integration Tests](https://img.shields.io/badge/Integration%20Tests-19%2F19%20Passing-brightgreen.svg)]()
+[![Module 3 Tests](https://img.shields.io/badge/Module%203%20Tests-15%2F15%20Passing-brightgreen.svg)]()
 [![Module 2 Tests](https://img.shields.io/badge/Module%202%20Tests-12%2F12%20Passing-brightgreen.svg)]()
 
 ---

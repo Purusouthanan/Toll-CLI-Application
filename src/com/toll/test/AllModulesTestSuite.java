@@ -242,7 +242,7 @@ public class AllModulesTestSuite {
         Context ctx = createContext();
         var resp = ctx.tollService.processEmergencyCrossing(1, 4, "AMB-MH-12-999", "Ambulance", LocalDateTime.now());
         assertTrue(resp.barrierOpened(), "Emergency vehicle barrier must open");
-        assertEquals(0.0, resp.transaction().tollAmount(), 0.001, "Toll must be Rs. 0");
+        assertEquals(0.0, resp.chargedAmount(), 0.001, "Toll must be Rs. 0");
     }
 
     private static void testMonthlyPassCrossing() {
