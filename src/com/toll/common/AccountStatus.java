@@ -1,5 +1,6 @@
 package com.toll.common;
 
+
 /**
  * Lifecycle status of a FASTag account.
  * ACTIVE: Account is operational and eligible for automated toll deduction.
