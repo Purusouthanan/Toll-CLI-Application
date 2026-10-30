@@ -1,22 +1,24 @@
 package com.toll.module1.plaza;
 
+import com.toll.common.TripType;
 import com.toll.common.VehicleType;
+import com.toll.module1.plaza.model.TollPlaza;
+
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
 
 /**
- * Interface contract for Member 1: Module 1 (Toll Plaza and Lane Setup).
- * Responsibilities:
- * - Admin creates toll plazas and lanes (minimum 2 lanes per plaza).
- * - Lane types: FASTAG, CASH, EMERGENCY. Status: OPEN, CLOSED.
- * - Lane safety: A lane can be closed ONLY if no vehicle is currently being processed.
- * - Toll rates with effective dates per vehicle type and trip type (Single/Return).
- * - A plaza cannot open until a rate exists for EVERY vehicle type.
+ * Interface contract for Module 1 (Toll Plaza and Lane Setup).
  */
 public interface IPlazaService {
     // Toll Plaza operations
-    void createPlaza(int plazaId, String name, String highwayName, String location);
+    TollPlaza createPlaza(int plazaId, String name, String highwayName, String location);
     boolean openPlaza(int plazaId);
+    boolean openPlaza(int plazaId, LocalDate currentDate);
     void closePlaza(int plazaId);
+    Optional<TollPlaza> getPlaza(int plazaId);
+    List<TollPlaza> getAllPlazas();
 
     // Lane operations
     void addLane(int plazaId, int laneNumber, String laneType);
@@ -24,6 +26,6 @@ public interface IPlazaService {
     boolean closeLane(int plazaId, int laneNumber);
 
     // Rate management with effective date
-    void setTollRate(int plazaId, VehicleType vehicleType, String tripType, double amount, LocalDate effectiveDate);
-    double getActiveRate(int plazaId, VehicleType vehicleType, String tripType, LocalDate queryDate);
+    void setTollRate(int plazaId, VehicleType vehicleType, TripType tripType, double amount, LocalDate effectiveDate);
+    double getActiveRate(int plazaId, VehicleType vehicleType, TripType tripType, LocalDate queryDate);
 }
